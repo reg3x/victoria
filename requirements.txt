@@ -1,0 +1,4 @@
+Django==1.7.3
+django-cors-headers==1.0.0
+djangorestframework==3.0.3
+wsgiref==0.1.2
