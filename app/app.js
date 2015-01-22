@@ -1,4 +1,7 @@
-var vicApp = angular.module('vicApp', ['vicController']);
+var vicApp = angular.module('vicApp', [
+    'ngRoute',
+    'vicController',
+]);
 
 vicApp.directive('navbar', function () {
     return {
@@ -45,6 +48,19 @@ vicApp.directive('marketing', function () {
     };
 
 });
+
+vicApp.config(['$routeProvider',function ($routeProvider) {
+    $routeProvider.
+        when('/', {
+            templateUrl: '/components/home/home.html',
+        }).
+        when('/catalogo', {
+            templateUrl: 'catalogo.html'
+        }).
+        otherwise({
+            redirectTo: '/'
+        });
+} ]);
 
 //add config for headers
 //add SPA router
