@@ -14,9 +14,8 @@ vicApp.directive('catcontainer', function () {
                 
                 $http.get('/components/catalog/'+$routeParams.product+'.json').
                 success(function(data) {
-                    console.log($routeParams.product +".json loaded successfuly");
+                    console.log($routeParams.product+".json loaded successfuly");
                     console.log("parameters: "+ $routeParams.product);
-
                     $scope.product = data;
                 }).
                 error(function () {
