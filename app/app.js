@@ -17,9 +17,12 @@ vicApp.directive('navbar', function () {
 vicApp.config(['$routeProvider',function ($routeProvider) {
     $routeProvider.
         when('/', {
-            templateUrl: '/components/home/home.html',
+            templateUrl: '/components/home/home.html'
         }).
-        when('/catalog', {
+        when('/catalog/', {
+            templateUrl: '/components/catalog/catalog.html'
+        }).
+        when('/catalog/:product', {
             templateUrl: '/components/catalog/catalog.html'
         }).
         otherwise({

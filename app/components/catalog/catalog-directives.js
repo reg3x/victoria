@@ -8,6 +8,17 @@ vicApp.directive('catcontainer', function () {
             
             if (typeof $routeParams.product === 'undefined') {
                 console.dir('no parameter provided: '+ typeof $routeParams.product);
+                
+                $http.get('/components/catalog/all.json').
+                success(function(data) {
+                    console.log("all.json loaded successfuly");
+                    console.log("parameters: "+ $routeParams.product);
+                    $scope.product = data;
+                }).
+                error(function () {
+                    console.log("{{$routeParams.product}}.json NOT loaded successfuly");        
+                });
+                
                 }
             else {
                 console.dir('parameter provided: '+ $routeParams.product);
