@@ -3,7 +3,7 @@ var vicApp = angular.module('catalogDirectives', [ ]);
 vicApp.directive('catcontainer', function () {
     return{
         restrict : 'E',
-        templateUrl: '/components/catalog/catcontainer.html',
+        templateUrl: '/components/catalog/catalog-container.html',
         controller : ['$http', '$scope','$routeParams', function ($http, $scope, $routeParams) {
             
             if (typeof $routeParams.product === 'undefined') {

@@ -2,7 +2,8 @@ var vicApp = angular.module('vicApp', [
     'ngRoute',
     'vicController',
     'homeDirectives',
-    'catalogDirectives'
+    'catalogDirectives',
+    'cartDirectives'
 ]);
 
 vicApp.directive('navbar', function () {
@@ -24,6 +25,9 @@ vicApp.config(['$routeProvider',function ($routeProvider) {
         }).
         when('/catalog/:product', {
             templateUrl: '/components/catalog/catalog.html'
+        }).
+        when('/cart/', {
+            templateUrl: '/components/cart/cart.html'
         }).
         otherwise({
             redirectTo: '/'
