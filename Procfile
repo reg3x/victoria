@@ -1,1 +1,1 @@
-web: gunicorn victoria.wsgi --log-file -
+web: gunicorn victoria.wsgi
