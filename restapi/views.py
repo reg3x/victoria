@@ -1,17 +1,17 @@
 from django.shortcuts import render
 from rest_framework import generics, permissions
 
-from serializers import ProductSerializer
-from models import Product
+from serializers import PantySerializer
+from models import Panty
 
-class ProductList(generics.ListCreateAPIView):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
+class PantyList(generics.ListCreateAPIView):
+    queryset = Panty.objects.all()
+    serializer_class = PantySerializer
     permission_classes = [permissions.AllowAny]
 
 
-class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
+class PantyDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Panty.objects.all()
+    serializer_class = PantySerializer
     permission_classes = [permissions.AllowAny]
 

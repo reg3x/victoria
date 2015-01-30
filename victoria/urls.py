@@ -1,12 +1,12 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from restapi.views import ProductList, ProductDetail
+from restapi.views import PantyList, PantyDetail
 
-product_urls = patterns('',
-    url(r'^$', ProductList.as_view(), name='product-list'),
-    url(r'^/(?P<pk>\d+)$', ProductDetail.as_view(), name='product-detail')
+panty_urls = patterns('',
+    url(r'^$', PantyList.as_view(), name='panty-list'),
+    url(r'^/(?P<pk>\d+)$', PantyDetail.as_view(), name='panty-detail')
 )
 
 urlpatterns = patterns('',
-    url(r'^products', include(product_urls))
+    url(r'^panty', include(panty_urls))
 )

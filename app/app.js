@@ -1,9 +1,11 @@
 var vicApp = angular.module('vicApp', [
+    'ngResource',
     'ngRoute',
     'vicController',
     'homeDirectives',
     'catalogDirectives',
-    'cartDirectives'
+    'cartDirectives',
+    'vicServices',
 ]);
 
 vicApp.directive('navbar', function () {
