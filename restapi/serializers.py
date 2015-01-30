@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import Panty, Legging, Bra, Cream, Butter, Fragance
+from models import Panty, Legging, Brasier, Cream, Butter, Fragance
 
 
 class PantySerializer(serializers.ModelSerializer):
@@ -14,9 +14,9 @@ class LeggingSerializer(serializers.ModelSerializer):
         fields = ('product_id', 'name', 'price', 'stock', 'description', 'img')
 
 
-class BraSerializer(serializers.ModelSerializer):
+class BrasierSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Bra
+        model = Brasier
         fields = ('product_id', 'name', 'price', 'stock', 'description', 'img')
 
 

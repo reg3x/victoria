@@ -1,8 +1,8 @@
 from rest_framework import generics, permissions
 
-from serializers import PantySerializer, LeggingSerializer, BraSerializer, CreamSerializer,\
+from serializers import PantySerializer, LeggingSerializer, BrasierSerializer, CreamSerializer,\
     ButterSerializer, FraganceSerializer
-from models import Panty, Legging, Bra, Cream, Butter, Fragance
+from models import Panty, Legging, Brasier, Cream, Butter, Fragance
 
 
 class PantyList(generics.ListCreateAPIView):
@@ -29,15 +29,15 @@ class LeggingDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.AllowAny]
 
 
-class BraList(generics.ListCreateAPIView):
-    queryset = Legging.objects.all()
-    serializer_class = BraSerializer
+class BrasierList(generics.ListCreateAPIView):
+    queryset = Brasier.objects.all()
+    serializer_class = BrasierSerializer
     permission_classes = [permissions.AllowAny]
 
 
-class BraDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Bra.objects.all()
-    serializer_class = BraSerializer
+class BrasierDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Brasier.objects.all()
+    serializer_class = BrasierSerializer
     permission_classes = [permissions.AllowAny]
 
 

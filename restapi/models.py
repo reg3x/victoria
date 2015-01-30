@@ -4,10 +4,10 @@ from django.db import models
 class Panty(models.Model):
     product_id = models.IntegerField(primary_key=True, max_length=20)
     name = models.CharField(max_length=100)
-    description = models.CharField(max_length=300)
+    description = models.CharField(max_length=1000)
     price = models.FloatField(max_length=10)
-    img = models.CharField(max_length=50)
-    thumbnail = models.CharField(max_length=50)
+    img = models.CharField(max_length=100)
+    thumbnail = models.CharField(max_length=100)
     stock = models.IntegerField(max_length=10, verbose_name="Cantidad Disponible")
 
     def __str__(self):
@@ -20,23 +20,23 @@ class Panty(models.Model):
 class Legging(models.Model):
     product_id = models.IntegerField(primary_key=True, max_length=20)
     name = models.CharField(max_length=100)
-    description = models.CharField(max_length=300)
+    description = models.CharField(max_length=1000)
     price = models.FloatField(max_length=10)
-    img = models.CharField(max_length=50)
-    thumbnail = models.CharField(max_length=50)
+    img = models.CharField(max_length=100)
+    thumbnail = models.CharField(max_length=100)
     stock = models.IntegerField(max_length=10, verbose_name="Cantidad Disponible")
 
     def __str__(self):
         return self.name
 
 
-class Bra(models.Model):
+class Brasier(models.Model):
     product_id = models.IntegerField(primary_key=True, max_length=20)
     name = models.CharField(max_length=100)
-    description = models.CharField(max_length=300)
+    description = models.CharField(max_length=1000)
     price = models.FloatField(max_length=10)
-    img = models.CharField(max_length=50)
-    thumbnail = models.CharField(max_length=50)
+    img = models.CharField(max_length=100)
+    thumbnail = models.CharField(max_length=100)
     stock = models.IntegerField(max_length=10, verbose_name="Cantidad Disponible")
 
     def __str__(self):
@@ -46,10 +46,10 @@ class Bra(models.Model):
 class Cream(models.Model):
     product_id = models.IntegerField(primary_key=True, max_length=20)
     name = models.CharField(max_length=100)
-    description = models.CharField(max_length=300)
+    description = models.CharField(max_length=1000)
     price = models.FloatField(max_length=10)
-    img = models.CharField(max_length=50)
-    thumbnail = models.CharField(max_length=50)
+    img = models.CharField(max_length=100)
+    thumbnail = models.CharField(max_length=100)
     stock = models.IntegerField(max_length=10, verbose_name="Cantidad Disponible")
 
     def __str__(self):
@@ -59,10 +59,10 @@ class Cream(models.Model):
 class Butter(models.Model):
     product_id = models.IntegerField(primary_key=True, max_length=20)
     name = models.CharField(max_length=100)
-    description = models.CharField(max_length=300)
+    description = models.CharField(max_length=1000)
     price = models.FloatField(max_length=10)
-    img = models.CharField(max_length=50)
-    thumbnail = models.CharField(max_length=50)
+    img = models.CharField(max_length=100)
+    thumbnail = models.CharField(max_length=100)
     stock = models.IntegerField(max_length=10, verbose_name="Cantidad Disponible")
 
     def __str__(self):
@@ -72,10 +72,10 @@ class Butter(models.Model):
 class Fragance(models.Model):
     product_id = models.IntegerField(primary_key=True, max_length=20)
     name = models.CharField(max_length=100)
-    description = models.CharField(max_length=300)
+    description = models.CharField(max_length=1000)
     price = models.FloatField(max_length=10)
-    img = models.CharField(max_length=50)
-    thumbnail = models.CharField(max_length=50)
+    img = models.CharField(max_length=100)
+    thumbnail = models.CharField(max_length=100)
     stock = models.IntegerField(max_length=10, verbose_name="Cantidad Disponible")
 
     def __str__(self):
