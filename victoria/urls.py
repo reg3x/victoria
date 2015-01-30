@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from restapi.views import PantyList, PantyDetail, LeggingList,\
-    LeggingDetail, BraList, BraDetail, CreamList, CreamDetail,\
+    LeggingDetail, BrasierList, BrasierDetail, CreamList, CreamDetail,\
     ButterList, ButterDetail, FraganceList, FraganceDetail
 
 
@@ -14,9 +14,9 @@ legging_urls = patterns('',
     url(r'^/(?P<pk>\d+)$', LeggingDetail.as_view(), name='legging-detail')
 )
 
-bra_urls = patterns('',
-    url(r'^$', BraList.as_view(), name='bra-list'),
-    url(r'^/(?P<pk>\d+)$', BraDetail.as_view(), name='bra-detail')
+brasier_urls = patterns('',
+    url(r'^$', BrasierList.as_view(), name='bra-list'),
+    url(r'^/(?P<pk>\d+)$', BrasierDetail.as_view(), name='bra-detail')
 )
 
 cream_urls = patterns('',
@@ -38,7 +38,7 @@ fragance_urls = patterns('',
 catalog_urls = patterns('',
     url(r'panty', include(panty_urls)),
     url(r'legging', include(legging_urls)),
-    url(r'bra', include(bra_urls)),
+    url(r'brasier', include(brasier_urls)),
     url(r'cream', include(cream_urls)),
     url(r'butter', include(butter_urls)),
     url(r'fragance', include(fragance_urls)),
