@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-sm-6 col-md-4" ng-repeat=" item in product">
     <div class="thumbnail">
-      <img src="/components/catalog/img/{{item.img}}" alt="...">
+      <img ng-src="/components/catalog/img/{{item.img}}" alt="...">
       <div class="caption">
         <h3>{{item.name}}</h3>
         <p>Precio: {{item.price}}$</p>
