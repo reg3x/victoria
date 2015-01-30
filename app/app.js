@@ -25,7 +25,7 @@ vicApp.config(['$routeProvider',function ($routeProvider) {
         when('/catalog/', {
             templateUrl: '/components/catalog/catalog.html'
         }).
-        when('/catalog/:product', {
+        when('/catalog/:section', {
             templateUrl: '/components/catalog/catalog.html'
         }).
         when('/cart/', {
