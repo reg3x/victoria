@@ -1,8 +1,9 @@
-from django.shortcuts import render
 from rest_framework import generics, permissions
 
-from serializers import PantySerializer
-from models import Panty
+from serializers import PantySerializer, LeggingSerializer, BraSerializer, CreamSerializer,\
+    ButterSerializer, FraganceSerializer
+from models import Panty, Legging, Bra, Cream, Butter, Fragance
+
 
 class PantyList(generics.ListCreateAPIView):
     queryset = Panty.objects.all()
@@ -15,3 +16,62 @@ class PantyDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PantySerializer
     permission_classes = [permissions.AllowAny]
 
+
+class LeggingList(generics.ListCreateAPIView):
+    queryset = Legging.objects.all()
+    serializer_class = LeggingSerializer
+    permission_classes = [permissions.AllowAny]
+
+
+class LeggingDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Legging.objects.all()
+    serializer_class = LeggingSerializer
+    permission_classes = [permissions.AllowAny]
+
+
+class BraList(generics.ListCreateAPIView):
+    queryset = Legging.objects.all()
+    serializer_class = BraSerializer
+    permission_classes = [permissions.AllowAny]
+
+
+class BraDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Bra.objects.all()
+    serializer_class = BraSerializer
+    permission_classes = [permissions.AllowAny]
+
+
+class CreamList(generics.ListCreateAPIView):
+    queryset = Cream.objects.all()
+    serializer_class = CreamSerializer
+    permission_classes = [permissions.AllowAny]
+
+
+class CreamDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Cream.objects.all()
+    serializer_class = CreamSerializer
+    permission_classes = [permissions.AllowAny]
+
+
+class ButterList(generics.ListCreateAPIView):
+    queryset = Butter.objects.all()
+    serializer_class = ButterSerializer
+    permission_classes = [permissions.AllowAny]
+
+
+class ButterDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Butter.objects.all()
+    serializer_class = ButterSerializer
+    permission_classes = [permissions.AllowAny]
+
+
+class FraganceList(generics.ListCreateAPIView):
+    queryset = Fragance.objects.all()
+    serializer_class = FraganceSerializer
+    permission_classes = [permissions.AllowAny]
+
+
+class FraganceDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Fragance.objects.all()
+    serializer_class = FraganceSerializer
+    permission_classes = [permissions.AllowAny]
