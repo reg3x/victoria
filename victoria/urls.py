@@ -45,7 +45,7 @@ catalog_urls = patterns('',
 )
 
 urlpatterns = patterns('',
-    url(r'^catalog', include(catalog_urls))
+    url(r'^api/catalog', include(catalog_urls))
 )
 
 
