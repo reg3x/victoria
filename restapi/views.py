@@ -1,77 +1,34 @@
-from rest_framework import generics, permissions
-
+from rest_framework import viewsets
 from serializers import PantySerializer, LeggingSerializer, BrasierSerializer, CreamSerializer,\
     ButterSerializer, FraganceSerializer
 from models import Panty, Legging, Brasier, Cream, Butter, Fragance
 
 
-class PantyList(generics.ListCreateAPIView):
+class PantyViewSet(viewsets.ModelViewSet):
     queryset = Panty.objects.all()
     serializer_class = PantySerializer
-    permission_classes = [permissions.AllowAny]
 
 
-class PantyDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Panty.objects.all()
-    serializer_class = PantySerializer
-    permission_classes = [permissions.AllowAny]
-
-
-class LeggingList(generics.ListCreateAPIView):
+class LeggingViewSet(viewsets.ModelViewSet):
     queryset = Legging.objects.all()
     serializer_class = LeggingSerializer
-    permission_classes = [permissions.AllowAny]
 
 
-class LeggingDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Legging.objects.all()
-    serializer_class = LeggingSerializer
-    permission_classes = [permissions.AllowAny]
-
-
-class BrasierList(generics.ListCreateAPIView):
+class BrasierViewSet(viewsets.ModelViewSet):
     queryset = Brasier.objects.all()
     serializer_class = BrasierSerializer
-    permission_classes = [permissions.AllowAny]
 
 
-class BrasierDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Brasier.objects.all()
-    serializer_class = BrasierSerializer
-    permission_classes = [permissions.AllowAny]
-
-
-class CreamList(generics.ListCreateAPIView):
+class CreamViewSet(viewsets.ModelViewSet):
     queryset = Cream.objects.all()
     serializer_class = CreamSerializer
-    permission_classes = [permissions.AllowAny]
 
 
-class CreamDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Cream.objects.all()
-    serializer_class = CreamSerializer
-    permission_classes = [permissions.AllowAny]
-
-
-class ButterList(generics.ListCreateAPIView):
+class ButterViewSet(viewsets.ModelViewSet):
     queryset = Butter.objects.all()
     serializer_class = ButterSerializer
-    permission_classes = [permissions.AllowAny]
 
 
-class ButterDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Butter.objects.all()
-    serializer_class = ButterSerializer
-    permission_classes = [permissions.AllowAny]
-
-
-class FraganceList(generics.ListCreateAPIView):
+class FraganceViewSet(viewsets.ModelViewSet):
     queryset = Fragance.objects.all()
     serializer_class = FraganceSerializer
-    permission_classes = [permissions.AllowAny]
-
-
-class FraganceDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Fragance.objects.all()
-    serializer_class = FraganceSerializer
-    permission_classes = [permissions.AllowAny]
