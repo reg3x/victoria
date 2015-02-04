@@ -1,7 +1,9 @@
 from rest_framework import viewsets
+from rest_framework.permissions import AllowAny
 from serializers import PantySerializer, LeggingSerializer, BrasierSerializer, CreamSerializer,\
-    ButterSerializer, FraganceSerializer
+    ButterSerializer, FraganceSerializer, AllSerializer
 from models import Panty, Legging, Brasier, Cream, Butter, Fragance
+from itertools import chain
 
 
 class PantyViewSet(viewsets.ModelViewSet):
@@ -32,3 +34,10 @@ class ButterViewSet(viewsets.ModelViewSet):
 class FraganceViewSet(viewsets.ModelViewSet):
     queryset = Fragance.objects.all()
     serializer_class = FraganceSerializer
+
+
+class AllViewSet(viewsets.ModelViewSet):
+    permission_classes = (AllowAny,)
+    queryset = list(chain(Panty.objects.all(), Legging.objects.all(), Brasier.objects.all(), Cream.objects.all(),
+                          Butter.objects.all(), Fragance.objects.all()))
+    serializer_class = AllSerializer

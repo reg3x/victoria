@@ -36,3 +36,13 @@ class FraganceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Fragance
         fields = ('product_id', 'name', 'price', 'stock', 'description', 'img')
+
+
+class AllSerializer(serializers.Serializer):
+    product_id = serializers.IntegerField()
+    name = serializers.CharField()
+    price = serializers.FloatField()
+    stock = serializers.IntegerField()
+    description = serializers.CharField()
+    img = serializers.CharField()
+    #fields = ('product_id', 'name', 'price', 'stock', 'description', 'img')
