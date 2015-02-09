@@ -13,9 +13,6 @@ class Panty(models.Model):
     def __str__(self):
         return self.name
 
-    class Meta:
-        verbose_name_plural = "panties"
-
 
 class Legging(models.Model):
     product_id = models.IntegerField(primary_key=True, max_length=20)
